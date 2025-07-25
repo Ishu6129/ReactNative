@@ -1,0 +1,20 @@
+npm install -g expo-cli
+
+npx create-expo-app@latest (tsx)
+npx create-expo-app@latest --template blank   (app.js)
+
+
+rnfes - for boiler pallet
+
+View is a container for any element
+
+Text use to display any text in application 
+
+TextInput use to take user input
+
+FlatList provide scrollable list
+
+SectionList use for section wise list
+
+modal use to create pop-up or screen overlay
+
