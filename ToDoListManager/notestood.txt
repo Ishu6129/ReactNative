@@ -1,0 +1,10 @@
+
+Libraries
+-- React Native Paper
+#for ios use "pod" library
+
+npx create-expo-app@latest --template blank
+npm install react-native-paper
+npm install react-native-safe-area-context
+npx pod-install 
+npm install @react-native-vector-icons/material-design-icons
