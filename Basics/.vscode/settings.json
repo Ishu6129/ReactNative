@@ -1,7 +1,35 @@
 {
-  "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit",
-    "source.organizeImports": "explicit",
-    "source.sortMembers": "explicit"
-  }
+  "editor.minimap.enabled": false,
+  "editor.codeLens": false,
+  "editor.inlineSuggest.enabled": false,
+  "editor.lightbulb.enabled": false,
+  "editor.smoothScrolling": false,
+  "editor.wordWrap": "off",
+  "editor.renderWhitespace": "none",
+  "editor.cursorSmoothCaretAnimation": false,
+  "editor.parameterHints.enabled": false,
+  "editor.hover.enabled": false,
+  "files.autoSave": "onFocusChange",
+  "workbench.startupEditor": "none",
+  "workbench.iconTheme": null,
+  "workbench.editor.enablePreview": false,
+  "workbench.tree.indent": 8,
+  "extensions.autoUpdate": false,
+  "extensions.autoCheckUpdates": false,
+  "explorer.compactFolders": false,
+  "terminal.integrated.scrollback": 1000,
+  "breadcrumbs.enabled": false,
+  "typescript.tsserver.enable": false,
+  "javascript.suggest.enabled": false,
+  "python.analysis.typeCheckingMode": "off",
+  "security.workspace.trust.enabled": false
 }
+
+
+// {
+//   "editor.codeActionsOnSave": {
+//     "source.fixAll": "explicit",
+//     "source.organizeImports": "explicit",
+//     "source.sortMembers": "explicit"
+//   }
+// }

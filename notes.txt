@@ -18,3 +18,10 @@ SectionList use for section wise list
 
 modal use to create pop-up or screen overlay
 
+
+Navigation :
+Stack Navigator:
+npm i react-native-screens react-native-safe-area-context @react-navigation/native
+npm install @react-navigation/native-stack
+Tab Navigator:
+npm install @react-navigation/bottom-tabs
