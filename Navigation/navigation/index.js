@@ -1,22 +1,56 @@
+import 'react-native-gesture-handler';
+import 'react-native-reanimated';
+
 import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createDrawerNavigator } from "@react-navigation/drawer";
 import HomeScreen from "../screens/HomeScreen";
 import Profile from "../screens/Profile";
-import User  from "../screens/User";
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
+import User from "../screens/User";
 import Icon from 'react-native-vector-icons/Ionicons';
-import { Colors } from "react-native/Libraries/NewAppScreen";
-import { useColorScheme } from "react-native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
+const Drawer = createDrawerNavigator();
+
+const DrawerNavigatorContainer = () => {
+  return (
+    <Drawer.Navigator
+      screenOptions={{
+        headerShown: true,
+        drawerActiveTintColor: 'tomato',
+        drawerActiveBackgroundColor: 'yellow',
+      }}
+    >
+      <Drawer.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{ drawerIcon: props => <Icon name="home" {...props} /> }}
+      />
+      <Drawer.Screen
+        name="Profile"
+        component={Profile}
+        options={{ drawerIcon: props => <Icon name="body" {...props} /> }}
+      />
+      <Drawer.Screen
+        name="User"
+        component={User}
+        options={{ drawerIcon: props => <Icon name="person-circle-outline" {...props} /> }}
+      />
+    </Drawer.Navigator>
+  );
+};
 
 const Navigation = () => {
   return (
     <NavigationContainer>
-        {/* <StackNavigatorContaner/> */}
-        <TabNavigatorContainer/>
+      {/* <StackNavigatorContaner /> */}
+      {/* <TabNavigatorContainer /> */}
+      <DrawerNavigatorContainer />
     </NavigationContainer>
-  )
-} 
+  );
+};
+
+
 const tab= createBottomTabNavigator();
 const TabNavigatorContainer = () => {
   return (
@@ -40,15 +74,15 @@ const HomeStack=()=>{
   );
 }
 
-// const StackNavigatorContaner=()=>{
-//     return(
-//     <Stack.Navigator initialRouteName="Home" >
-//         <Stack.Screen options={{headerBackVisible:false, headerTitle:"HomeSweetHome",headerTintColor:"green"}} name="Home" component={HomeScreen} />
-//         <Stack.Screen name="Profile" component={Profile} />
-//         <Stack.Screen name="User" component={User} />
-//     </Stack.Navigator>
+const StackNavigatorContaner=()=>{
+    return(
+    <Stack.Navigator initialRouteName="Home" >
+        <Stack.Screen options={{headerBackVisible:false, headerTitle:"HomeSweetHome",headerTintColor:"green"}} name="Home" component={HomeScreen} />
+        <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="User" component={User} />
+    </Stack.Navigator>
     
-//   );
-// } 
+  );
+} 
 
 export default Navigation
